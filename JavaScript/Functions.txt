@@ -1,0 +1,343 @@
+Functions in js:
+->Functions are first citizen in js
+->Functions are objects in js
+
+Types of Functions:
+->Functions Declaration statements/named Function/Pure Function
+->Function Expression
+->Function Programming
+ a.Higher oreder Function
+ b.Callback Function
+->Arrow Function
+->Nested Function
+->IIFE(Imediate Invoking Function Expression) Function
+
+-->Functions Declaration statements:
+->It is a Set Instructions/Block of code use to perform 
+
+      keyword            identifier          identifier
+	  
+	  function         fun-name(paramete
+
+function demo()
+{
+	console.log("HW");
+}
+console.log(demo);
+demo()
+
+Function Expression:
+Assigning function as value to one variable will call it as Expression
+
+Anonymous Function:
+let a = function()            //function without name  
+		}
+			console.log("hello")
+		}
+	console.log(a)
+	a()
+	
+Create a function expression for 3nums arthimetic operations for 3nums and find largest 
+of 3nums with input
+
+let main = function()
+{
+    let a = Number(prompt("enter a :"))
+    let b = Number(prompt("enter b :"))
+    let c = Number(prompt("enter c :"))
+    let d = a + b + c
+    console.log(d);
+    let e = a - b - c
+    console.log(e);
+    let f = a * b * c
+    console.log(f);
+
+    if(a>=b && a <= c)
+    {
+        console.log("a is >");
+    }else if(b >= a && b >= c){
+        console.log("bis >");
+    }else{
+        console.log("c is >");
+    }
+    
+    
+}
+main()
+
+Function Programming:
+Higher oreder function & Callback Function
+->It is used to perform generic task(Multiple) 
+->It can be created using function declaration statement or function expression / Arrow function
+
+Higher order function:
+->A function which accepts another function as an argument
+
+Callback Function:
+->A Function which passed an argument to Higher order function is called Callback Function
+
+//Day 5
+Arrow Function:
+introduced in ES-6 version 2015 (ECMA - SCRIPt)
+used to reduce num of lines in a code
+
+two types of return
+1)implict return arrow function
+2)explict return arrow function
+
+1)implict return arrow function:
+-> no need of using return keyword
+ex: let a = () => console.log("hello");
+		code.log(a);
+		a()
+		
+2)explict return arrow function:
+-> return keyword is mandatory
+ex: let b = () => {return "helloooo"}
+		console.log(b);
+		console.log(b());
+		
+Nested Function:
+-> A function inside another function is called Nested Function-
+ex:
+function parent()
+{
+    function child()
+    {
+        console.log("i am child fun");
+        
+    }
+    child()
+}
+parent()
+
+//lexical scope / scope-chain
+-> ability of js - engine search for variable in loacal-scope if it is not 
+ex:
+function main()
+{
+    let a = 10;
+    function child()
+    {
+        console.log(a);
+        
+    }
+    child()
+}
+main()
+
+//closer:the binding of child function to the parent function /
+the binding of child function lexical scope to the parent function
+ex:
+function parent()
+{
+    let a = 100;
+    function child()
+    {
+        console.log(a);
+    }
+    return child
+}
+parent()()-*
+
+Note: Disadvente of closure memory wastage
+-> When we called the child function multiple times, multiple closure will be created in Heap area
+
+
+Day7
+IIFE:
+--> it will be called immediatly once function object is created
+-->syntax:
+	(expression-function)()
+	
+	function()
+	{
+	 console.log("hello")
+	})();
+	
+	(() => {
+	 console.log("hell")
+	})();
+	
+Arrays in JavaScript:
+-> it is used to store data
+-> heterogenous in js
+
+two-ways:
+//declaration way
+let arr = [10, "hello" , true, 1n, undefined]
+console.log(arr);
+ 
+//using new keyword
+
+let arr1 = new Array(10, 20,30)
+console.log(arr1);
+
+objects in js:
+ex:
+let obj = {
+    names : "abc",
+    num : 1,
+    lastname:'dp',
+    boolean : true,
+    arr : [10,20,30],
+    null : null,
+    undefined : undefined,
+    demo : function()
+            {
+                console.log("Hi");
+                
+            },
+    fullname:function(){
+        var dd=this.demo();
+        return this.names+" "+this.lastname+dd;
+    }
+    
+
+}
+console.log(obj.names)
+console.log(obj.fullname.apply())
+
+Day8:
+Asynchronous(asynchronous function)
+
+-> naking a way for other fun to execute first
+
+two methods:
+1. setTimeout(cbf, delay-time)
+window.setTimeout(()=>{
+    console.log("hi settomeout");
+    
+},5000)
+2. setInterval(cbf, delay-time)
+window.setInterval(()=>{
+    console.log("hi setIntereval");
+    
+},2000)
+parent inside window object
+
+-->Promise:
+_> it is an object
+-> used to look after async function
+
+3-phase
+1.pending issue phase (either it will resolve / reject)
+2.resolve/fillfill phase(.then(cbf))
+3.reject phase (.catch(cbf))
+
+ex:new Promise((resolve,reject)=>{
+    --async-fun-code
+})
+.then(cbf)
+.catch(cbf)
+
+-< Promise chaining 
+using multiple methods
+
+                                Bom
+			_____________________|_______________________________	     
+		   |       |      |      |         |          |    |    |  
+ 		screen history fetch navigator navigation storage DOM Fetch 
+                                                           |
+														Document
+														       |
+														      Html
+														    ___|______
+														   |         |
+														 Head       Body
+														   |         |
+														 Title     <Tags>
+
+                         documents
+						    /\
+						   /  \
+						  /    \
+						 /      \
+						/        \
+			       	 Header     Body
+					   /\         | \
+					  /  \        |  \
+					 /    \       |   \
+					/      \      |    \ 
+				 Header  metadata |     \
+				                  |      \
+								form     
+								  /\
+								 /  \
+								/    \
+							   /      \
+							  /        \
+ 						   label     input
+						   
+//in-direct access (methods in dom)
+// 1.document.getElementById("value")
+// 2.document.getElementsByClassName("vale")
+// 3.document.getElementsByTagName("vale")
+// 4.document.getElementsByName("")
+// 5.document.querySelector("value")
+// 6.document.querySelectorAll("value")
+
+Document querySelector
+--> we have pass value with css symbol.
+->will return reference of first-element
+
+Document querySelectorAll
+-->we have pass value with css symbol
+->will return reference in a node-list
+
+//events in dom 
+-
+-> it is an action performed by end-user on a wen page 
+types:
+1. keyboard event
+	-key-up event
+	-key-down event
+	-key-press event
+2. mouse event
+	-dbclick
+	-0nmouseover event
+	-onmouseleave event
+3. form event
+	-input event
+	-blur event
+	-focus event
+4. pointer event
+
+Manipuklation/Modification o dom
+-> used to update/modify an dom
+-methods:
+-> createElemnet()
+-> appenChild()
+
+Json(JavaScript object Notation):
+-> it is a plain-text file used to store data in the form of key and value pair.
+where all the keys should be enclosed in a double quote
+--> two met:
+1.strigify()
+-will convert object into JSON format.
+2.parse()
+-willl convert JSON to object format.
+ 
+How create a json:
+s1: create a .json file 
+s2: create a data in the form key and value pair and key should enclosed
+	with double quotes . has a value we should not undefined and function datatype.
+		-->[{}, {}, {},..........](array of object)
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Webpage Layout</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+        }
+
+        /* Navigation Bar */
+        .navbar {
+            background-color: #d9c9f0;
+            padding: 10px 20px;
+            text-align: center;
+        }
+
+        .navbar a {
+            color: #000;
+            text-decoration: none;
+            margin: 0 10px;
+            font-weight: bold;
+        }
+
+        /* Layout */
+        .container {
+            display: flex;
+            margin: 20px;
+        }
+
+        .sidebar {
+            flex: 1;
+            margin-right: 20px;
+        }
+
+        .main-content {
+            flex: 2;
+            background-color: #e4e4e4;
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        /* Sidebar */
+        .sidebar img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin-bottom: 10px;
+        }
+
+        .sidebar h3 {
+            text-align: center;
+            font-size: 1rem;
+            margin: 5px 0;
+        }
+
+        /* Main Content */
+        .main-content img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+
+        .main-content h1 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+
+        .main-content p {
+            font-size: 1rem;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .main-content .button {
+            display: inline-block;
+            background-color: #4d4dff;
+            color: #fff;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+
+        .main-content .button:hover {
+            background-color: #3333ff;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <a href="#">FUTURE</a>
+        <a href="#">IMPERFECT</a>
+        <a href="#">Lorem</a>
+        <a href="#">IPSUM</a>
+        <a href="#">FEUGIAT</a>
+        <a href="#">TEMPUS</a>
+        <a href="#">ADPISCING</a>
+    </div>
+
+    <div class="container">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <img src="https://via.placeholder.com/300x200" alt="Bear Image">
+            <h3>ODIO CONGUE MATTIS</h3>
+            <img src="https://via.placeholder.com/300x200" alt="Mountain Image">
+            <h3>ENIM NISL VERUORES</h3>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <img src="https://via.placeholder.com/600x400" alt="Main Mountain Image">
+            <h1>ULTRICES SED MEGAN EUISMOD ENI MVITEAG GRAVIDA</h1>
+            <p>LOREM IPSUM DOLOR AMET NULLAM CONSEQUET ETIAM FEUGIAT</p>
+            <p>Duis tincidunt nibh dolor, vestibulum viverra tellus egestas scelerisque. Aliquam ac ullamcorper nisl. Duis ut urna dolor. Morbi dignissim ullamcorper placerat. Proin placerat massa arcu, luctus iaculis ligula aliquam ut. Phasellus nec libero scelerisque massa viverra sagittis in et nisi. Sed sed fringilla dui.</p>
+            <a href="#" class="button">Continue Reading</a>
+        </div>
+    </div>
+</body>
+</html>
